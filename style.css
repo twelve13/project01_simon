@@ -1,0 +1,41 @@
+/*main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}*/
+
+.game-console {
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+}
+
+button {
+	height: 200px;
+	width: 200px;
+	display: flex;
+}
+
+#green {
+	background-color: green;
+}
+
+#red {
+	background-color: red;
+}
+
+#yellow {
+	background-color: yellow;
+}
+
+#blue {
+	background-color: blue;
+}
+
+#start {
+	height: 50px;
+	margin: 200px;
+}
