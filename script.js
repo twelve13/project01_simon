@@ -9,7 +9,6 @@ var yellowButton = $("#yellow");
 var blueButton = $("#blue");
 var startButton = $("#start");
 
-var choice;
 
 var greenLight = function() {
 	greenButton.css("background-color", "limegreen");
@@ -33,8 +32,47 @@ var blueLight = function(){
 var targetSequence = [];
 var inputSequence = [];
 
+
+var compare = function(){
+	if (targetSequence.length !== inputSequence.length) return false;
+	for (var i = 0; i < targetSequence.length; i++){	
+
+		if (targetSequence[i] !== inputSequence[i]) {
+		console.log("incorrect.")
+		return false;
+		} else {
+		console.log("correct!")
+		return true;
+	}
+	}
+}
+
+
+var flashColor = function(){
+
+	for(var i=0; i<targetSequence.length; i++){
+		if (targetSequence[i] == 1){
+		// console.log("one was chosen");
+		greenLight();
+		greenOff();
+		// setTimeout(greenLight(), 3000);
+	} else if (targetSequence[i] == 2){
+		// console.log("two was chosen");
+		redLight();
+	} else if (targetSequence[i] == 3){
+		// console.log("three was chosen");
+		yellowLight();
+	} else if (targetSequence[i] == 4){
+		// console.log("four was chosen");
+		blueLight();
+	}
+
+}
+};
+
 var getNextColor = function(){
-	targetSequence.push(Math.floor((Math.random() * 4 +1)));	
+	targetSequence.push(Math.floor((Math.random() * 4 +1)));
+	flashColor();	
 }
 
 // var play = function(){
@@ -62,23 +100,7 @@ var getNextColor = function(){
 // }
 
 
-var flashColor = function(){
-		if (targetSequence[0] == 1){
-		// console.log("one was chosen");
-		greenLight();
-		greenOff();
-		// setTimeout(greenLight(), 3000);
-	} else if (targetSequence[0] == 2){
-		// console.log("two was chosen");
-		redLight();
-	} else if (targetSequence[0] == 3){
-		// console.log("three was chosen");
-		yellowLight();
-	} else if (targetSequence[0] == 4){
-		// console.log("four was chosen");
-		blueLight();
-	}
-}
+
 
 var getUserChoice = function(){
 
@@ -134,22 +156,10 @@ var play = function(){
 	getNextColor();
 	console.log("target is " + targetSequence);
 
-	flashColor();
 	
 	getUserChoice();
 	
 }
-
-
-var compare = function(){
-	
-	if (targetSequence[0] === inputSequence[0]) {
-		console.log("correct!")
-	} else {
-		console.log("incorrect.")
-	}
-	}
-
 
 
 startButton.on("click", play);
