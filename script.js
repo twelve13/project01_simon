@@ -31,58 +31,128 @@ var blueLight = function(){
 
 
 var targetSequence = [];
+var inputSequence = [];
 
 var getNextColor = function(){
 	targetSequence.push(Math.floor((Math.random() * 4 +1)));	
 }
 
-var play = function(){
-	for (var i = 0; i < 1; i++){
-	console.log("next is ")
-	getNextColor();
-	console.log(targetSequence);
-	if (targetSequence[i] == 1){
-		console.log("one was chosen");
+// var play = function(){
+// 	for (var i = 0; i < 1; i++){
+// 	console.log("next is ")
+// 	getNextColor();
+// 	console.log(targetSequence);
+// 	if (targetSequence[i] == 1){
+// 		console.log("one was chosen");
+// 		greenLight();
+// 		greenOff();
+// 		// setTimeout(greenLight(), 3000);
+// 	} else if (targetSequence[i] == 2){
+// 		console.log("two was chosen");
+// 		redLight();
+// 	} else if (targetSequence[i] == 3){
+// 		console.log("three was chosen");
+// 		yellowLight();
+// 	} else if (targetSequence[i] == 4){
+// 		console.log("four was chosen");
+// 		blueLight();
+// 	}
+// 	}
+
+// }
+
+
+var flashColor = function(){
+		if (targetSequence[0] == 1){
+		// console.log("one was chosen");
 		greenLight();
 		greenOff();
 		// setTimeout(greenLight(), 3000);
-	} else if (targetSequence[i] == 2){
-		console.log("two was chosen");
+	} else if (targetSequence[0] == 2){
+		// console.log("two was chosen");
 		redLight();
-	} else if (targetSequence[i] == 3){
-		console.log("three was chosen");
+	} else if (targetSequence[0] == 3){
+		// console.log("three was chosen");
 		yellowLight();
-	} else if (targetSequence[i] == 4){
-		console.log("four was chosen");
+	} else if (targetSequence[0] == 4){
+		// console.log("four was chosen");
 		blueLight();
 	}
+}
+
+var getUserChoice = function(){
+
+
+	var selectGreen = function(){
+	console.log("clicked on green");
+	inputSequence.push(1);
+
+	compare();
+}
+
+	var selectRed = function(){
+	console.log("clicked on red");
+	inputSequence.push(2);
+
+	compare();
+}
+
+	var selectYellow = function(){
+	console.log("clicked on yellow");
+	inputSequence.push(3)
+
+	compare();
+}
+
+	var selectBlue = function(){
+	console.log("clicked on blue");
+	inputSequence.push(4);
+
+	compare();
+}
+
+
+
+	//compare();
+
+	greenButton.on("click", selectGreen);
+	redButton.on("click", selectRed);
+	yellowButton.on("click", selectYellow);
+	blueButton.on("click", selectBlue);
+
+	// return choice;
+	// compare(choice, targetSequence);
+
+}
+
+	
+
+
+
+var play = function(){
+	
+	getNextColor();
+	console.log("target is " + targetSequence);
+
+	flashColor();
+	
+	getUserChoice();
+	
+}
+
+
+var compare = function(){
+	
+	if (targetSequence[0] === inputSequence[0]) {
+		console.log("correct!")
+	} else {
+		console.log("incorrect.")
+	}
 	}
 
-}
 
-var selectGreen = function(){
-	console.log("clicked on green");
-	return choice = 1;
-}
-
-var selectRed = function(){
-	console.log("clicked on red");
-	return choice = 2;
-}
-
-var selectYellow = function(){
-	console.log("clicked on yellow");
-	return choice = 3;
-}
-
-var selectBlue = function(){
-	console.log("clicked on blue");
-	return choice = 4;
-}
 
 startButton.on("click", play);
 
-greenButton.on("click", selectGreen);
-redButton.on("click", selectRed);
-yellowButton.on("click", selectYellow);
-blueButton.on("click", selectBlue);
+
+
