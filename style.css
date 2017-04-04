@@ -2,31 +2,36 @@
 	font-family: arial;
 }
 
+main {
+	display: flex;
+	margin: 3%;
+}
+
 #green {
 	background-color: green;
-	float: left;
+	/*float: left;*/
 
 }
 
 #red {
 	background-color: #a8000b;
-	float: left;
+/*	float: left;*/
 }
 
 #yellow {
 	background-color: #d6c100;
-	float: left;
+/*	float: left;*/
 }
 
 #blue {
 	background-color: #2034b6;
-	float: left;
+	/*float: left;*/
 }
 
-#start {
+/*#start {
 	height: 50px;
 	margin: 200px;
-}
+}*/
 
 button {
 	height: 150px;
@@ -35,13 +40,20 @@ button {
 	border-radius: 50%;
 }
 
+.non-light-box {
+	display: flex;
+	height: 800px;
+	width: 450px;
+	flex-wrap: wrap;
+}
+
 .logo {
 	height: 200px;
 	width: 150px;
 	background-color: black;
 	color: white;
 	text-align: center;
-	float: left;
+	/*float: left;*/
 }
 
 .metro {
@@ -56,34 +68,52 @@ button {
 	height: 180px;
 	width: 300px;
 	font-size: 100px;
-	float: left;
+/*	float: left;*/
 	margin: 20px 0 0 5px;
 }
 
 .light-box {
-	margin: 20px 0 0 20px;
-	float: left;
+	margin: 10px 0 0 30px;
+	/*float: left;*/
 }
 
 .green-line, .red-line, .yellow-line, .blue-line {
-	clear: left;
+/*	clear: left;*/
 	height: 150px;
 	width: 600px;
+	display: flex;
+	margin: 2%;
 }
 
 /*.green-line p, .red-line p, .yellow-line p, .blue-line p{
 	margin-top: 70px;
 }*/
 
-.clearfix:after {
+/*.clearfix:after {
   clear: both;
   content: " ";
   display: block;
 }
-
+*/
 #start {
 	background-image : url("Metrocard.jpg");
 	height: 200px;
-	width: 300px;
+	width: 260px;
+	background-size: contain;
+  	background-repeat: no-repeat;
+  	border-radius: 10%;
+  	margin-left: 15%;
 }
 
+header {
+	display: flex;
+	width: 450px;
+}
+
+.line-name {
+	display: flex;
+	align-items: center;
+	margin-left: 5%;
+	font-size: 18px;
+	font-weight: bold;
+}

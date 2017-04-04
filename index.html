@@ -7,46 +7,41 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<main>
-<!-- 	<div class="game-console">
-		<div class="console-row">
-			<button id="green"></button>
-			<button id="yellow"></button>
-		</div>
-		<div class="console-row">
-			<button id="red"></button>
-			<button id="blue"></button>
-		</div>
-		<button id="start">Start</button>
-	</div> -->
-	<div class="logo">
-		<div class="m">m</div>
-		<div class="metro">metro</div>
-		<div class="disclaimer">(not really)</div>
+<main class>
+
+	<div class="non-light-box">
+		<header>
+			<div class="logo">
+				<div class="m">m</div>
+				<div class="metro">metro</div>
+				<div class="disclaimer">(not really)</div>
+			</div>
+
+			<div class="game-name">Simon</div>
+		</header>
+		<div id="start"></div>
 	</div>
-
-	<div class="game-name">Simon</div>
-
-	<div class="light-box clearfix">
+	
+	<div class="light-box">
 		<div class="green-line">
 			<button id="green"></button>
-			<p>Green Line * Branch Avenue to Greenbelt</p>
+			<div class="line-name">Green Line * Branch Avenue to Greenbelt</div>
 		</div>
 		<div class="red-line">
 			<button id="red"></button>
-			<p>Red Line * Glenmont to Shady Grove</p>
+			<div class="line-name">Red Line * Glenmont to Shady Grove</div>
 		</div>
 		<div class="yellow-line">
 			<button id="yellow"></button>
-			<p>Yellow Line * Huntington to Mt Vernon Sq</p>
+			<div class="line-name">Yellow Line * Huntington to Mt Vernon Sq</div>
 		</div>
 		<div class="blue-line">
 			<button id="blue"></button>
-			<p>Blue Line * Franconia-Springfield to Largo Town Center</p>
+			<div class="line-name">Blue Line * Franconia-Springfield to Largo</div>
 		</div>
 	</div>
 
-	<div id="start">Start</div>
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 	<script src="script.js"></script>
 </main>
