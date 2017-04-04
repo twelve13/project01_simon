@@ -7,53 +7,24 @@ main {
 	margin: 3%;
 }
 
-#green {
-	background-color: green;
-	/*float: left;*/
-
-}
-
-#red {
-	background-color: #a8000b;
-/*	float: left;*/
-}
-
-#yellow {
-	background-color: #d6c100;
-/*	float: left;*/
-}
-
-#blue {
-	background-color: #2034b6;
-	/*float: left;*/
-}
-
-/*#start {
-	height: 50px;
-	margin: 200px;
-}*/
-
-button {
-	height: 150px;
-	width: 150px;
-/*	display: flex;*/
-	border-radius: 50%;
-}
-
 .non-light-box {
 	display: flex;
+	flex-wrap: wrap;
 	height: 800px;
 	width: 450px;
-	flex-wrap: wrap;
+}
+
+header {
+	display: flex;
+	width: 450px;
 }
 
 .logo {
-	height: 200px;
-	width: 150px;
 	background-color: black;
 	color: white;
+	height: 200px;
 	text-align: center;
-	/*float: left;*/
+	width: 150px;
 }
 
 .metro {
@@ -65,36 +36,12 @@ button {
 }
 
 .game-name {
-	height: 180px;
-	width: 300px;
 	font-size: 100px;
-/*	float: left;*/
+	height: 180px;
 	margin: 20px 0 0 5px;
+	width: 300px;
 }
 
-.light-box {
-	margin: 10px 0 0 30px;
-	/*float: left;*/
-}
-
-.green-line, .red-line, .yellow-line, .blue-line {
-/*	clear: left;*/
-	height: 150px;
-	width: 600px;
-	display: flex;
-	margin: 2%;
-}
-
-/*.green-line p, .red-line p, .yellow-line p, .blue-line p{
-	margin-top: 70px;
-}*/
-
-/*.clearfix:after {
-  clear: both;
-  content: " ";
-  display: block;
-}
-*/
 #start {
 	background-image : url("Metrocard.jpg");
 	height: 200px;
@@ -105,15 +52,43 @@ button {
   	margin-left: 15%;
 }
 
-header {
+.light-box {
+	margin: 10px 0 0 30px;
+}
+
+.green-line, .red-line, .yellow-line, .blue-line {
 	display: flex;
-	width: 450px;
+	height: 150px;
+	margin: 2%;
+	width: 600px;
+}
+
+button {
+	border-radius: 50%;
+	height: 150px;
+	width: 150px;
+}
+
+#green {
+	background-color: green;
+}
+
+#red {
+	background-color: #a8000b;
+}
+
+#yellow {
+	background-color: #d6c100;
+}
+
+#blue {
+	background-color: #2034b6;
 }
 
 .line-name {
-	display: flex;
 	align-items: center;
-	margin-left: 5%;
+	display: flex;
 	font-size: 18px;
 	font-weight: bold;
+	margin-left: 5%;
 }
