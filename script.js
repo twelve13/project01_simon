@@ -90,11 +90,21 @@ var compare = function(){
 	if (choiceA == targetSequence[currentMove]){
 		console.log("correcto");
 		currentMove++;
+
 		if(currentMove == targetSequence.length) {
-		getNextColor();
-	}
+			if(currentMove == 6){
+				$("#score").text("ARR")
+				targetSequence = [];
+			} else {
+			$("#score").text(6 - currentMove);
+			getNextColor();
+			};
+			
+		}
 	} else {
 		console.log("wrongo");
+		$("#destination").text("NO PASSENGER")
+		$("#score").text("---");
 		targetSequence = [];
 	}
 

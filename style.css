@@ -10,8 +10,9 @@ main {
 .non-light-box {
 	display: flex;
 	flex-wrap: wrap;
-	height: 800px;
+	height: 700px;
 	width: 450px;
+	justify-content: center;
 }
 
 header {
@@ -42,6 +43,32 @@ header {
 	width: 300px;
 }
 
+.scoreboard {
+	background-color: black;
+	display: flex;
+	flex-wrap: wrap;
+	font-size: 24px;
+	height: 150px;
+	text-align: center;
+	width: 400px;
+}
+.scoreboard :nth-child(1), .scoreboard :nth-child(2){
+	color: red;
+}
+
+.scoreboard :nth-child(3), .scoreboard :nth-child(4) {
+	color: yellow;
+	width: 200px;
+}
+
+.scoreboard :nth-child(1), .scoreboard :nth-child(3){
+	width: 280px;
+}
+
+.scoreboard :nth-child(2), .scoreboard :nth-child(4){
+	width: 120px;
+}
+
 #start {
 	background-image : url("Metrocard.jpg");
 	height: 200px;
@@ -49,11 +76,10 @@ header {
 	background-size: contain;
   	background-repeat: no-repeat;
   	border-radius: 10%;
-  	margin-left: 15%;
 }
 
 .light-box {
-	margin: 10px 0 0 30px;
+	margin: 10px 0 0 110px;
 }
 
 .green-line, .red-line, .yellow-line, .blue-line {
