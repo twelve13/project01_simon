@@ -3,10 +3,11 @@ var redButton = $("#red");
 var yellowButton = $("#yellow");
 var blueButton = $("#blue");
 var startButton = $("#start");
-
+var form = $("form");
 
 var targetSequence = [];
 var currentMove = 0;
+var level = 6;
 
 
 var greenLight = function() {
@@ -64,6 +65,15 @@ var flashTargetColor = function(){
 	}
 };
 
+form.submit(function(event){
+	event.preventDefault();
+	level = $("#select").val();
+	console.log(level);
+
+});
+
+
+
 
 // figure out later how to incorporate this
 // let randomKey = [1, 2, 3, 4];
@@ -92,11 +102,11 @@ var compare = function(){
 		currentMove++;
 
 		if(currentMove == targetSequence.length) {
-			if(currentMove == 6){
+			if(currentMove == level){
 				$("#score").text("ARR")
 				targetSequence = [];
 			} else {
-			$("#score").text(6 - currentMove);
+			$("#score").text(level - currentMove);
 			getNextColor();
 			};
 			
@@ -122,7 +132,12 @@ var getNextColor = function(){
 	flashTargetColor();
 };
 
-startButton.on("click", getNextColor);
+var play = function(){	
+	$("#score").text(level);
+	getNextColor();
+};
+
+startButton.on("click", play);
 
 
 // make generic function that applies to all the buttons
@@ -133,6 +148,13 @@ startButton.on("click", getNextColor);
 //increment current , then just wait for them to click on the next button
 //after check if colors match, make sure you're not at the last position, can't advance past what's there
 //also check is this the last color in the seqeunce, then trigger get Next color
+
+
+//have multiple levels of difficulty
+	//number of moves
+	//speed
+
+//have time restrictions for choices?
 
 
 

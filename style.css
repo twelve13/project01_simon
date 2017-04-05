@@ -69,6 +69,11 @@ header {
 	width: 120px;
 }
 
+form {
+	height: 25px;
+	width: 260px;
+}
+
 #start {
 	background-image : url("Metrocard.jpg");
 	height: 200px;
@@ -89,7 +94,7 @@ header {
 	width: 600px;
 }
 
-button {
+.light {
 	border-radius: 50%;
 	height: 150px;
 	width: 150px;
