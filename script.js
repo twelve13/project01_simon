@@ -1,13 +1,12 @@
-//green = 1
-//red = 2
-//yellow = 3
-//blue = 4
-
 var greenButton = $("#green");
 var redButton = $("#red");
 var yellowButton = $("#yellow");
 var blueButton = $("#blue");
 var startButton = $("#start");
+
+
+var targetSequence = [];
+var currentMove = 0;
 
 
 var greenLight = function() {
@@ -46,120 +45,84 @@ var blueLight = function(){
 };
 
 
-
-var targetSequence = [];
-var inputSequence = [];
-
-var inPlay = true;
-
-var compare = function(){
-	if (targetSequence.length !== inputSequence.length) return false;
-	for (let i = 0; i < targetSequence.length; i++){	
-
-		if (targetSequence[i] !== inputSequence[i]) {
-		console.log("incorrect.");
-		inPlay = false;
-		} else {
-		console.log("correct!");
-		inPlay = true;
-		inputSequence = [];
-		getNextColor();
-		}
-	}
-};
-
-
 var flashTargetColor = function(){
-	let offset = 1000
-	for(let i=0; i<targetSequence.length; i++){
+	let offset = 900;
+	for (let i = 0; i < targetSequence.length; i++){
 		if (targetSequence[i] == 1){
 		// console.log("one was chosen");
-		setTimeout(greenLight, i * offset);
+		setTimeout(greenLight, (i+1) * offset);
 		} else if (targetSequence[i] == 2){
 		// console.log("two was chosen");
-		setTimeout(redLight, i * offset);
+		setTimeout(redLight, (i+1) * offset);
 		} else if (targetSequence[i] == 3){
 		// console.log("three was chosen");
-		setTimeout(yellowLight, i * offset);
+		setTimeout(yellowLight, (i+1) * offset);
 		} else if (targetSequence[i] == 4){
 		// console.log("four was chosen");
-		setTimeout(blueLight, i * offset);
+		setTimeout(blueLight, (i+1) * offset);
 		}
 	}
 };
 
 
+// figure out later how to incorporate this
+// let randomKey = [1, 2, 3, 4];
+// let [green, red, yellow, blue] = randomKey;
 
+var compare = function(){
 
-var getUserChoice = function(){
-
-
-	var selectGreen = function(){
-	console.log("clicked on green");
-	greenLight();
-	inputSequence.push(1);
-	if (targetSequence.length === inputSequence.length){
-		compare();
+	let choice = $(this).attr("id");
+	if (choice == "green"){
+		choiceA = 1;
+		greenLight();
+	} else if (choice == "red"){
+		choiceA = 2;
+		redLight();
+	} else if (choice == "yellow"){
+		choiceA = 3;
+		yellowLight();
+	} else if (choice == "blue"){
+		choiceA = 4;
+		blueLight();
 	}
+	console.log("user guess is " + choiceA);
+	console.log("number at first position of target is " + targetSequence[currentMove]);
+	if (choiceA == targetSequence[currentMove]){
+		console.log("correcto");
+		currentMove++;
+		if(currentMove == targetSequence.length) {
+		getNextColor();
 	}
-
-	var selectRed = function(){
-	console.log("clicked on red");
-	redLight();
-	inputSequence.push(2);
-	if (targetSequence.length === inputSequence.length){
-		compare();
-	}
-	}
-
-	var selectYellow = function(){
-	console.log("clicked on yellow");
-	yellowLight();
-	inputSequence.push(3)
-	if (targetSequence.length === inputSequence.length){
-		compare();
-	}
-	}
-
-	var selectBlue = function(){
-	console.log("clicked on blue");
-	blueLight();
-	inputSequence.push(4);
-	if (targetSequence.length === inputSequence.length){
-		compare();
-	}
+	} else {
+		console.log("wrongo");
+		targetSequence = [];
 	}
 
+}
 
-	greenButton.on("click", selectGreen);
-	redButton.on("click", selectRed);
-	yellowButton.on("click", selectYellow);
-	blueButton.on("click", selectBlue);
+	greenButton.on("click", compare);
+	redButton.on("click", compare);
+	yellowButton.on("click", compare);
+	blueButton.on("click", compare);
 
-};
 
-	
 var getNextColor = function(){
-	// inputSequence = [];
+	currentMove = 0;
 	targetSequence.push(Math.floor((Math.random() * 4 +1)));
 	flashTargetColor();
-	getUserChoice();	
 };
 
-var play = function(){
-// for (var i = 0; i < 3; i++){
-	// inputSequence = [];
-	getNextColor();
-	console.log("target is " + targetSequence);
-
-	
-	// getUserChoice();
+startButton.on("click", getNextColor);
 
 
-//}
-};
-
-startButton.on("click", play);
+// make generic function that applies to all the buttons
+// this will tell you which color was clicked based on element id 
+// set what equals what using arrays
+// every time you click
+// compare against target sequence at the current move index
+//increment current , then just wait for them to click on the next button
+//after check if colors match, make sure you're not at the last position, can't advance past what's there
+//also check is this the last color in the seqeunce, then trigger get Next color
 
 
 
