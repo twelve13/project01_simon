@@ -130,6 +130,7 @@ var compare = function(e){
 			// } else {
 			
 			$(".position:nth-child(" + level + ")").addClass("active");
+			$(".position:nth-child(" + (level - 1) + ")").removeClass("active");
 			getNextColor();
 			level++;
 			// };

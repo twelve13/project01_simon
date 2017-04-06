@@ -72,7 +72,7 @@ header {
 }
 
 .scoreboard2 {
-	background-color: black;
+/*	background-color: black;*/
 	display: flex;
 	flex-wrap: wrap;
 	height: 250px;
@@ -80,14 +80,17 @@ header {
 }
 
 .position {
-	background-color: gray;
-	border-radius: 50%;
+	/*background-color: white;
+	border-radius: 50%;*/
+	border: solid 1px black;
 	height: 50px;
 	width: 50px;
 }
 
 .active {
-	background-color: white;
+	background-size: contain;
+  	background-repeat: no-repeat;
+	background-image: url("commuter.png");
 }
 
 form {
