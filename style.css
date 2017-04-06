@@ -5,123 +5,62 @@
 main {
 	border: solid 2px black;
 	display: flex;
-	margin: 3%;
+	margin: 2%;
 }
 
-.non-light-box {
+.left-side {
 	display: flex;
 	flex-wrap: wrap;
-	height: 700px;
-	width: 450px;
-	justify-content: center;
+	height: 750px;
+	width: 50%;
+/*	justify-content: center;*/
 }
 
 header {
 	display: flex;
+	height: 140px;
 	width: 450px;
 }
 
 .logo {
 	background-color: black;
 	color: white;
-	height: 175px;
+	height: 140px;
 	text-align: center;
-	width: 150px;
+	width: 230px;
 }
 
 .metro {
-	font-size: 50px;
+	font-size: 30px;
 }
 
 .m {
-	font-size: 100px;
+	font-size: 80px;
 }
 
 .game-name {
-	font-size: 100px;
-	height: 155px;
-	margin: 8px 0 0 5px;
-	width: 300px;
-}
-
-.scoreboard {
-	background-color: black;
-	display: flex;
-	flex-wrap: wrap;
-	font-size: 24px;
-	height: 150px;
-	text-align: center;
-	width: 400px;
-}
-.scoreboard :nth-child(1), .scoreboard :nth-child(2){
-	color: red;
-	margin-top: 15px;
-}
-
-.scoreboard :nth-child(3), .scoreboard :nth-child(4) {
-	color: white;
-	width: 200px;
-}
-
-.scoreboard :nth-child(1), .scoreboard :nth-child(3){
-	width: 280px;
-}
-
-.scoreboard :nth-child(2), .scoreboard :nth-child(4){
-	width: 120px;
-}
-
-.scoreboard2 {
-/*	background-color: black;*/
-	display: flex;
-	flex-wrap: wrap;
-	height: 250px;
-	width: 400px;
-}
-
-.position {
-	/*background-color: white;
-	border-radius: 50%;*/
-	border: solid 1px black;
-	height: 50px;
-	width: 50px;
-}
-
-.active {
-	background-size: contain;
-  	background-repeat: no-repeat;
-	background-image: url("commuter.png");
-}
-
-form {
-	height: 25px;
-	width: 260px;
-}
-
-#start {
-	background-image : url("Metrocard.jpg");
-	height: 200px;
-	width: 260px;
-	background-size: contain;
-  	background-repeat: no-repeat;
-  	border-radius: 10%;
+	font-size: 80px;
+	height: 132px;
+	margin: 8px 0 0 12px;
+	width: 450px;
 }
 
 .light-box {
-	margin: 10px 0 0 110px;
+	margin: 6px 0 0 10px;
+	height: 590px;
 }
 
 .green-line, .red-line, .yellow-line, .blue-line {
 	display: flex;
-	height: 150px;
-	margin: 2%;
-	width: 600px;
+	height: 140px;
+	margin: 1%;
+	width: 560px;
 }
 
 .light {
 	border-radius: 50%;
-	height: 150px;
-	width: 150px;
+	height: 125px;
+	width: 125px;
 }
 
 #green {
@@ -147,3 +86,124 @@ form {
 	font-weight: bold;
 	margin-left: 5%;
 }
+
+
+
+.right-side {
+	display: flex;
+	flex-wrap: wrap;
+	height: 750px;
+	width: 50%;
+	justify-content: center;
+}
+
+
+/*.scoreboard {
+	background-color: black;
+	display: flex;
+	flex-wrap: wrap;
+	font-size: 24px;
+	height: 150px;
+	text-align: center;
+	width: 400px;
+}
+.scoreboard :nth-child(1), .scoreboard :nth-child(2){
+	color: red;
+	margin-top: 15px;
+}
+
+.scoreboard :nth-child(3), .scoreboard :nth-child(4) {
+	color: white;
+	width: 200px;
+}
+
+.scoreboard :nth-child(1), .scoreboard :nth-child(3){
+	width: 280px;
+}
+
+.scoreboard :nth-child(2), .scoreboard :nth-child(4){
+	width: 120px;
+}*/
+/*form {
+	height: 100px;
+	width: 260px;
+}*/
+.alerts {
+	align-items: center;
+	background-color: gray;
+	border-radius: 10%;
+	display: flex;
+	flex-wrap: wrap;
+	height: 200px;
+	justify-content: center;
+	margin: 10px;
+	width: 260px;
+}
+
+.alerts-heading {
+	align-items: center;
+	color: white;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	width: 260px;
+}
+
+.alerts-logo {
+	align-items: center;
+	background-color: orange;
+	display: flex;
+	font-size: 30px;
+	height: 40px;
+	justify-content: center;
+	width: 40px;
+}
+
+.alerts-text {
+	align-items: center;
+	display: flex;
+	font-size: 20px;
+	height: 40px;
+	margin-left: 5px;
+	text-transform: uppercase;
+	width: 175px;
+}
+
+.form-section {
+	display: flex;
+	height: 120px;
+}
+
+#start {
+	background-image : url("Metrocard.jpg");
+	background-repeat: no-repeat;
+	background-size: contain;
+  	border-radius: 10%;
+  	height: 200px;
+  	margin: 10px 10px 10px;
+	width: 260px;
+}
+.scoreboard2 {
+/*	background-color: black;*/
+	display: flex;
+	flex-wrap: wrap;
+	height: 250px;
+	width: 400px;
+}
+
+.position {
+	/*background-color: white;
+	border-radius: 50%;*/
+	border: solid 1px black;
+	height: 50px;
+	width: 50px;
+}
+
+.active {
+	background-size: contain;
+  	background-repeat: no-repeat;
+	background-image: url("commuter.png");
+}
+
+
+

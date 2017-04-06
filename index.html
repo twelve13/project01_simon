@@ -9,7 +9,7 @@
 <body>
 <main class>
 
-	<div class="non-light-box">
+	<div class="left-side">
 		<header>
 			<div class="logo">
 				<div class="m">m</div>
@@ -19,6 +19,27 @@
 
 			<div class="game-name">Simon</div>
 		</header>
+		<div class="light-box">
+		<div class="green-line">
+			<button class="light" id="green"></button>
+			<div class="line-name">Green Line * Branch Avenue to Greenbelt</div>
+		</div>
+		<div class="red-line">
+			<button class="light" id="red"></button>
+			<div class="line-name">Red Line * Glenmont to Shady Grove</div>
+		</div>
+		<div class="yellow-line">
+			<button class="light" id="yellow"></button>
+			<div class="line-name">Yellow Line * Huntington to Mt Vernon Sq</div>
+		</div>
+		<div class="blue-line">
+			<button class="light" id="blue"></button>
+			<div class="line-name">Blue Line * Franconia-Springfield to Largo</div>
+		</div>
+	</div>
+
+		</div>
+		<div class="right-side">
 	<!-- 	<div class="scoreboard">
 			<div>DEST</div>
 			<div>MIN</div>
@@ -26,6 +47,31 @@
 			<div id="score"></div>
 
 		</div> -->
+
+		
+	<div class="alerts">
+	<div class="alerts-heading">
+		<div class="alerts-logo">!</div>
+		<div class="alerts-text">Service Alerts</div>
+	</div>
+<div class="form-section">
+		<form>
+      <fieldset>
+        <select id="select">
+          <option class="test">Pick Your Poison</option>
+         
+            <option class="option" value="13">An elevator's out</option>
+            <option class="option" value="7">10-minute delays</option>
+            <option class="option" value="1">Continuous single tracking</option>
+    
+        </select>
+        <button type="submit">Submit</button>
+      </fieldset>
+    </form>
+    </div>
+</div>
+
+		<div id="start"></div>
 
 		<div class="scoreboard2">
 			<div class="position"></div>
@@ -50,44 +96,9 @@
 			<div class="position"></div>
 			<div class="position"></div>
 		</div>
-
-
-		<form>
-      <fieldset>
-        <select id="select">
-          <option class="test">Travel Conditions</option>
-         
-            <option class="option" value="13">Off-Peak</option>
-            <option class="option" value="7">Peak</option>
-            <option class="option" value="1">Peak and Single Tracking</option>
-    
-        </select>
-        <button type="submit">Submit</button>
-      </fieldset>
-    </form>
-
-
-		<div id="start"></div>
-	</div>
+</div>
 	
-	<div class="light-box">
-		<div class="green-line">
-			<button class="light" id="green"></button>
-			<div class="line-name">Green Line * Branch Avenue to Greenbelt</div>
-		</div>
-		<div class="red-line">
-			<button class="light" id="red"></button>
-			<div class="line-name">Red Line * Glenmont to Shady Grove</div>
-		</div>
-		<div class="yellow-line">
-			<button class="light" id="yellow"></button>
-			<div class="line-name">Yellow Line * Huntington to Mt Vernon Sq</div>
-		</div>
-		<div class="blue-line">
-			<button class="light" id="blue"></button>
-			<div class="line-name">Blue Line * Franconia-Springfield to Largo</div>
-		</div>
-	</div>
+
 	<!-- audio files obtained from https://www.freesound.org/people/guitarmaster/ -->
 	<audio id="e-note" src="e-note.wav"></audio>
 	<audio id="a-note" src="a-note.wav"></audio>
