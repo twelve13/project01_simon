@@ -79,30 +79,29 @@ form.submit(function(event){
 
 
 
-
 // figure out later how to incorporate this
 // let randomKey = [1, 2, 3, 4];
 // let [green, red, yellow, blue] = randomKey;
 
-var compare = function(){
-
+let compare = function(e){
+	e.preventDefault();
 	let choice = $(this).attr("id");
-	if (choice == "green"){
-		choiceA = 1;
+	if (choice == "green"  || e.which == 54){
+		choiceVal = 1;
 		greenLight();
-	} else if (choice == "red"){
-		choiceA = 2;
+	} else if (choice == "red" || e.which == 89){
+		choiceVal = 2;
 		redLight();
-	} else if (choice == "yellow"){
-		choiceA = 3;
+	} else if (choice == "yellow" || e.which == 72){
+		choiceVal = 3;
 		yellowLight();
-	} else if (choice == "blue"){
-		choiceA = 4;
+	} else if (choice == "blue" || e.which == 78){
+		choiceVal = 4;
 		blueLight();
 	}
-	console.log("user guess is " + choiceA);
+	console.log("user guess is " + choiceVal);
 	console.log("number at first position of target is " + targetSequence[currentMove]);
-	if (choiceA == targetSequence[currentMove]){
+	if (choiceVal == targetSequence[currentMove]){
 		console.log("correcto");
 		currentMove++;
 
@@ -125,10 +124,12 @@ var compare = function(){
 
 }
 
-	greenButton.on("click", compare);
-	redButton.on("click", compare);
-	yellowButton.on("click", compare);
-	blueButton.on("click", compare);
+greenButton.on("click", compare);
+redButton.on("click", compare);
+yellowButton.on("click", compare);
+blueButton.on("click", compare);
+
+document.addEventListener("keydown", compare);
 
 
 var getNextColor = function(){
@@ -138,6 +139,7 @@ var getNextColor = function(){
 };
 
 var play = function(){	
+	$("#destination").text("GENERAL ASSEMBLY")
 	$("#score").text(level);
 	getNextColor();
 };
