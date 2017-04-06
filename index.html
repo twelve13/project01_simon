@@ -7,105 +7,89 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<main class>
-
-	<div class="left-side">
-		<header>
-			<div class="logo">
-				<div class="m">m</div>
-				<div class="metro">metro</div>
-				<div class="disclaimer">(not really)</div>
+	<main class>
+		<div class="header-and-lightbox">
+			<header>
+				<div class="logo">
+					<div class="m">m</div>
+					<div class="metro">metro</div>
+					<div class="disclaimer">(not really)</div>
+				</div>
+				<div class="game-name">Simon</div>
+			</header>
+			<div class="light-box">
+				<div class="green-line">
+					<button class="light" id="green"></button>
+					<div class="line-name">Green Line * Branch Avenue to Greenbelt</div>
+				</div>
+				<div class="red-line">
+					<button class="light" id="red"></button>
+					<div class="line-name">Red Line * Glenmont to Shady Grove</div>
+				</div>
+				<div class="yellow-line">
+					<button class="light" id="yellow"></button>
+					<div class="line-name">Yellow Line * Huntington to Mt Vernon Sq</div>
+				</div>
+				<div class="blue-line">
+					<button class="light" id="blue"></button>
+					<div class="line-name">Blue Line * Franconia-Springfield to Largo</div>
+				</div>
 			</div>
-
-			<div class="game-name">Simon</div>
-		</header>
-		<div class="light-box">
-		<div class="green-line">
-			<button class="light" id="green"></button>
-			<div class="line-name">Green Line * Branch Avenue to Greenbelt</div>
 		</div>
-		<div class="red-line">
-			<button class="light" id="red"></button>
-			<div class="line-name">Red Line * Glenmont to Shady Grove</div>
+		<div class="options-and-distance-board">
+			<div class="alerts">
+				<div class="alerts-heading">
+					<div class="alerts-logo">!</div>
+					<div class="alerts-text">Service Alerts</div>
+				</div>
+			<div class="form-section">
+				<form>
+      				<fieldset>
+        				<select id="select">
+          					<option class="test">Pick Your Poison</option>
+            					<option class="option" value="13">An elevator's out</option>
+            					<option class="option" value="7">10-minute delays</option>
+            					<option class="option" value="1">Continuous single tracking</option>
+        				</select>
+        				<button type="submit">Submit</button>
+      				</fieldset>
+    			</form>
+    		</div>
+			</div>
+			<div id="start"></div>
+			<div class="commuter-start-section"></div>
+			<div class="scoreboard2">
+				<div class="position"></div>
+				<div class="position"></div>
+				<div class="position"></div>
+				<div class="position"></div>
+				<div class="position"></div>
+				<div class="position"></div>
+				<div class="position"></div>
+				<div class="position"></div>
+				<div class="position"></div>
+				<div class="position"></div>
+				<div class="position"></div>
+				<div class="position"></div>
+				<div class="position"></div>
+				<div class="position"></div>
+				<div class="position"></div>
+				<div class="position"></div>
+				<div class="position"></div>
+				<div class="position"></div>
+				<div class="position"></div>
+				<div class="position"></div>
+				<div class="position"><img class="home-icon" src="home.png" alt="your home"></div>
+			</div>
 		</div>
-		<div class="yellow-line">
-			<button class="light" id="yellow"></button>
-			<div class="line-name">Yellow Line * Huntington to Mt Vernon Sq</div>
-		</div>
-		<div class="blue-line">
-			<button class="light" id="blue"></button>
-			<div class="line-name">Blue Line * Franconia-Springfield to Largo</div>
-		</div>
-	</div>
-
-		</div>
-		<div class="right-side">
-	<!-- 	<div class="scoreboard">
-			<div>DEST</div>
-			<div>MIN</div>
-			<div id="destination">GENERAL ASSEMBLY</div>
-			<div id="score"></div>
-
-		</div> -->
-
-		
-	<div class="alerts">
-	<div class="alerts-heading">
-		<div class="alerts-logo">!</div>
-		<div class="alerts-text">Service Alerts</div>
-	</div>
-<div class="form-section">
-		<form>
-      <fieldset>
-        <select id="select">
-          <option class="test">Pick Your Poison</option>
-         
-            <option class="option" value="13">An elevator's out</option>
-            <option class="option" value="7">10-minute delays</option>
-            <option class="option" value="1">Continuous single tracking</option>
-    
-        </select>
-        <button type="submit">Submit</button>
-      </fieldset>
-    </form>
-    </div>
-</div>
-
-		<div id="start"></div>
-<div class="commuter-start-section"><img class="commuter-start" src="commuter-start.png" alt="you at the start of your commute"></div>
-		<div class="scoreboard2">
-			<div class="position"></div>
-			<div class="position"></div>
-			<div class="position"></div>
-			<div class="position"></div>
-			<div class="position"></div>
-			<div class="position"></div>
-			<div class="position"></div>
-			<div class="position"></div>
-			<div class="position"></div>
-			<div class="position"></div>
-			<div class="position"></div>
-			<div class="position"></div>
-			<div class="position"></div>
-			<div class="position"></div>
-			<div class="position"></div>
-			<div class="position"></div>
-			<div class="position"></div>
-			<div class="position"></div>
-			<div class="position"></div>
-			<div class="position"></div>
-			<div class="position"><img class="home-icon" src="home.png" alt="your home"></div>
-		</div>
-</div>
-	
-
-	<!-- audio files obtained from https://www.freesound.org/people/guitarmaster/ -->
+	<!-- audio files obtained from https://www.freesound.org/people/guitarmaster/  and  https://www.freesound.org/people/syseQ/ -->
 	<audio id="e-note" src="e-note.wav"></audio>
 	<audio id="a-note" src="a-note.wav"></audio>
 	<audio id="c-sharp-note" src="c-sharp-note.wav"></audio>
 	<audio id="a-low-note" src="a-low-note.wav"></audio>
+	<audio id="win" src="win.wav"></audio>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 	<script src="script.js"></script>
-</main>
+	</main>
 </body>
 </html>

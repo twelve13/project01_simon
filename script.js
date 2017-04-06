@@ -8,6 +8,7 @@ var form = $("form");
 var targetSequence = [];
 var currentMove = 0;
 var level = 13;
+var level2 = 13;
 var offset = 900;
 
 
@@ -76,10 +77,13 @@ form.submit(function(event){
 	console.log(level);
 	$("#score").text(level);
 	if (level == 13) {
+		level2 = 13;
 		offset = 900;
 	} else if (level == 7) {
+		level2 = 7;
 		offset = 700;
 	} else if (level == 1) {
+		level2 = 1;
 		offset = 550;
 	}
 
@@ -124,16 +128,16 @@ var compare = function(e){
 			
 
 		if(currentMove == targetSequence.length) {
-			// if(currentMove == level){
-			// 	$("#score").text("ARR")
-			// 	targetSequence = [];
-			// } else {
+			if(currentMove == (21 - level2)){
+				document.getElementById("win").play();
+				targetSequence = [];
+			} else {
 			
 			$(".position:nth-child(" + level + ")").addClass("active");
 			$(".position:nth-child(" + (level - 1) + ")").removeClass("active");
 			getNextColor();
 			level++;
-			// };
+			};
 
 
 		}

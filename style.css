@@ -8,7 +8,7 @@ main {
 	margin: 2%;
 }
 
-.left-side {
+.header-and-lightbox {
 	display: flex;
 	flex-wrap: wrap;
 	height: 750px;
@@ -89,7 +89,7 @@ header {
 
 
 
-.right-side {
+.options-and-distance-board {
 	display: flex;
 	flex-wrap: wrap;
 	height: 750px;
@@ -189,9 +189,12 @@ header {
 	width: 100px;
 }
 
-.commuter-start {
+.commuter-start-section {
+	background-image: url("commuter-start.png");
+	background-repeat: no-repeat;
+	background-size: contain;
 	height: 50px;
-	width: 50px;
+	width: 100px;
 }
 
 
