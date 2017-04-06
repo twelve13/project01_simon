@@ -7,8 +7,8 @@ var form = $("form");
 
 var targetSequence = [];
 var currentMove = 0;
-var level = 6;
-
+var level = 8;
+var offset = 900;
 
 var greenLight = function() {
 	greenButton.css("background-color", "limegreen");
@@ -16,6 +16,7 @@ var greenLight = function() {
 		greenButton.css("background-color", "green");
 	}
 	setTimeout(greenOff, 500);
+	document.getElementById("e-note").play();
 };
 
 
@@ -25,6 +26,7 @@ var redLight = function(){
 		redButton.css("background-color", "#a8000b");
 	}
 	setTimeout(redOff, 500);
+	document.getElementById("a-note").play();
 };
 
 
@@ -34,6 +36,7 @@ var yellowLight = function(){
 		yellowButton.css("background-color", "#d6c100");
 	}
 	setTimeout(yellowOff, 500);
+	document.getElementById("c-sharp-note").play();
 };
 
 
@@ -43,11 +46,12 @@ var blueLight = function(){
 		blueButton.css("background-color", "#2c42af");
 	}
 	setTimeout(blueOff, 500);
+	document.getElementById("a-low-note").play();
 };
 
 
 var flashTargetColor = function(){
-	let offset = 900;
+	offset = 900;
 	for (let i = 0; i < targetSequence.length; i++){
 		if (targetSequence[i] == 1){
 		// console.log("one was chosen");
@@ -69,6 +73,7 @@ form.submit(function(event){
 	event.preventDefault();
 	level = $("#select").val();
 	console.log(level);
+	$("#score").text(level);
 
 });
 
@@ -155,6 +160,12 @@ startButton.on("click", play);
 	//speed
 
 //have time restrictions for choices?
+
+//add sounds
+
+//maybe change layout
+
+//be able to choose using keyboard?
 
 
 
