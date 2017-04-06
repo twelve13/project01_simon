@@ -7,8 +7,9 @@ var form = $("form");
 
 var targetSequence = [];
 var currentMove = 0;
-var level = 8;
+var level = 13;
 var offset = 900;
+
 
 var greenLight = function() {
 	greenButton.css("background-color", "limegreen");
@@ -74,11 +75,11 @@ form.submit(function(event){
 	level = $("#select").val();
 	console.log(level);
 	$("#score").text(level);
-	if (level == 8) {
+	if (level == 13) {
 		offset = 900;
-	} else if (level == 14) {
+	} else if (level == 7) {
 		offset = 700;
-	} else if (level == 20) {
+	} else if (level == 1) {
 		offset = 550;
 	}
 
@@ -112,15 +113,28 @@ var compare = function(e){
 		console.log("correcto");
 		currentMove++;
 
-		if(currentMove == targetSequence.length) {
-			if(currentMove == level){
-				$("#score").text("ARR")
-				targetSequence = [];
-			} else {
-			$("#score").text(level - currentMove);
-			getNextColor();
-			};
+		// if(currentMove == targetSequence.length) {
+		// 	if(currentMove == level){
+		// 		$("#score").text("ARR")
+		// 		targetSequence = [];
+		// 	} else {
+		// 	$("#score").text(level - currentMove);
+		// 	getNextColor();
+		// 	};
 			
+
+		if(currentMove == targetSequence.length) {
+			// if(currentMove == level){
+			// 	$("#score").text("ARR")
+			// 	targetSequence = [];
+			// } else {
+			
+			$(".position:nth-child(" + level + ")").addClass("active");
+			getNextColor();
+			level++;
+			// };
+
+
 		}
 	} else {
 		console.log("wrongo");
