@@ -183,6 +183,18 @@ header {
   	margin: 10px 10px 10px;
 	width: 260px;
 }
+
+.commuter-start-section {
+	height: 100px;
+	width: 100px;
+}
+
+.commuter-start {
+	height: 50px;
+	width: 50px;
+}
+
+
 .scoreboard2 {
 /*	background-color: black;*/
 	display: flex;
@@ -194,7 +206,7 @@ header {
 .position {
 	/*background-color: white;
 	border-radius: 50%;*/
-	border: solid 1px black;
+/*	border: solid 1px black;*/
 	height: 50px;
 	width: 50px;
 }
@@ -205,5 +217,9 @@ header {
 	background-image: url("commuter.png");
 }
 
+.home-icon {
+	height: 50px;
+	width: 50px;
+}
 
 
