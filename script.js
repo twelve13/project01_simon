@@ -2,13 +2,14 @@ var greenButton = $("#green");
 var redButton = $("#red");
 var yellowButton = $("#yellow");
 var blueButton = $("#blue");
-var startButton = $("#start");
+
 var form = $("form");
+var startButton = $("#start");
 
 var targetSequence = [];
 var currentMove = 0;
 var level = 13;
-var level2 = 13;
+var levelForWin = 13;
 var offset = 900;
 
 
@@ -51,9 +52,8 @@ var blueLight = function(){
 	document.getElementById("a-low-note").play();
 };
 
-
+//need to so (i+1) * offset or the first one will directly overlap with the user click
 var flashTargetColor = function(){
-	// offset = 900;
 	for (let i = 0; i < targetSequence.length; i++){
 		if (targetSequence[i] == 1){
 		// console.log("one was chosen");
@@ -77,23 +77,18 @@ form.submit(function(event){
 	console.log(level);
 	$("#score").text(level);
 	if (level == 13) {
-		level2 = 13;
+		levelForWin = 13;
 		offset = 900;
 	} else if (level == 7) {
-		level2 = 7;
+		levelForWin = 7;
 		offset = 700;
 	} else if (level == 1) {
-		level2 = 1;
+		levelForWin = 1;
 		offset = 550;
 	}
 
 });
 
-
-
-// figure out later how to incorporate this
-// let randomKey = [1, 2, 3, 4];
-// let [green, red, yellow, blue] = randomKey;
 
 var compare = function(e){
 	e.preventDefault();
@@ -117,18 +112,8 @@ var compare = function(e){
 		console.log("correcto");
 		currentMove++;
 
-		// if(currentMove == targetSequence.length) {
-		// 	if(currentMove == level){
-		// 		$("#score").text("ARR")
-		// 		targetSequence = [];
-		// 	} else {
-		// 	$("#score").text(level - currentMove);
-		// 	getNextColor();
-		// 	};
-			
-
 		if(currentMove == targetSequence.length) {
-			if(currentMove == (21 - level2)){
+			if(currentMove == (21 - levelForWin)){
 				document.getElementById("win").play();
 				targetSequence = [];
 			} else {
@@ -138,16 +123,11 @@ var compare = function(e){
 			getNextColor();
 			level++;
 			};
-
-
 		}
 	} else {
 		console.log("wrongo");
-		$("#destination").text("NO PASSENGER")
-		$("#score").text("---");
 		targetSequence = [];
 	}
-
 }
 
 greenButton.on("click", compare);
@@ -164,13 +144,8 @@ var getNextColor = function(){
 	flashTargetColor();
 };
 
-var play = function(){	
-	$("#destination").text("GENERAL ASSEMBLY")
-	$("#score").text(level);
-	getNextColor();
-};
 
-startButton.on("click", play);
+startButton.on("click", getNextColor);
 
 
 // make generic function that applies to all the buttons

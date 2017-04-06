@@ -13,7 +13,6 @@ main {
 	flex-wrap: wrap;
 	height: 750px;
 	width: 50%;
-/*	justify-content: center;*/
 }
 
 header {
@@ -46,8 +45,8 @@ header {
 }
 
 .light-box {
-	margin: 6px 0 0 10px;
 	height: 590px;
+	margin: 6px 0 0 10px;
 }
 
 .green-line, .red-line, .yellow-line, .blue-line {
@@ -87,8 +86,6 @@ header {
 	margin-left: 5%;
 }
 
-
-
 .options-and-distance-board {
 	display: flex;
 	flex-wrap: wrap;
@@ -97,37 +94,6 @@ header {
 	justify-content: center;
 }
 
-
-/*.scoreboard {
-	background-color: black;
-	display: flex;
-	flex-wrap: wrap;
-	font-size: 24px;
-	height: 150px;
-	text-align: center;
-	width: 400px;
-}
-.scoreboard :nth-child(1), .scoreboard :nth-child(2){
-	color: red;
-	margin-top: 15px;
-}
-
-.scoreboard :nth-child(3), .scoreboard :nth-child(4) {
-	color: white;
-	width: 200px;
-}
-
-.scoreboard :nth-child(1), .scoreboard :nth-child(3){
-	width: 280px;
-}
-
-.scoreboard :nth-child(2), .scoreboard :nth-child(4){
-	width: 120px;
-}*/
-/*form {
-	height: 100px;
-	width: 260px;
-}*/
 .alerts {
 	align-items: center;
 	background-color: gray;
@@ -143,8 +109,8 @@ header {
 .alerts-heading {
 	align-items: center;
 	color: white;
-	height: 50px;
 	display: flex;
+	height: 50px;
 	justify-content: center;
 	width: 260px;
 }
@@ -197,9 +163,7 @@ header {
 	width: 100px;
 }
 
-
 .scoreboard2 {
-/*	background-color: black;*/
 	display: flex;
 	flex-wrap: wrap;
 	height: 250px;
@@ -207,9 +171,6 @@ header {
 }
 
 .position {
-	/*background-color: white;
-	border-radius: 50%;*/
-/*	border: solid 1px black;*/
 	height: 50px;
 	width: 50px;
 }
