@@ -1,189 +1,187 @@
-*{
-	font-family: arial;
+* {
+    font-family: arial;
 }
 
 main {
-	border: solid 2px black;
-	display: flex;
-	margin: 2%;
+    border: solid 2px black;
+    display: flex;
+    margin: 2%;
 }
 
 .header-and-lightbox {
-	display: flex;
-	flex-wrap: wrap;
-	height: 750px;
-	width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    height: 750px;
+    width: 50%;
 }
 
 header {
-	display: flex;
-	height: 140px;
-	width: 450px;
+    display: flex;
+    height: 140px;
+    width: 450px;
 }
 
 .logo {
-	background-color: black;
-	color: white;
-	height: 140px;
-	text-align: center;
-	width: 230px;
+    background-color: black;
+    color: white;
+    height: 140px;
+    text-align: center;
+    width: 230px;
 }
 
 .metro {
-	font-size: 30px;
+    font-size: 30px;
 }
 
 .m {
-	font-size: 80px;
+    font-size: 80px;
 }
 
 .game-name {
-	font-size: 80px;
-	height: 132px;
-	margin: 8px 0 0 12px;
-	width: 450px;
+    font-size: 80px;
+    height: 132px;
+    margin: 8px 0 0 12px;
+    width: 450px;
 }
 
 .light-box {
-	height: 590px;
-	margin: 6px 0 0 10px;
+    height: 590px;
+    margin: 6px 0 0 10px;
 }
 
 .green-line, .red-line, .yellow-line, .blue-line {
-	display: flex;
-	height: 140px;
-	margin: 1%;
-	width: 560px;
+    display: flex;
+    height: 140px;
+    margin: 1%;
+    width: 560px;
 }
 
 .light {
-	border-radius: 50%;
-	height: 125px;
-	width: 125px;
+    border-radius: 50%;
+    height: 125px;
+    width: 125px;
 }
 
 #green {
-	background-color: green;
+    background-color: green;
 }
 
 #red {
-	background-color: #a8000b;
+    background-color: #a8000b;
 }
 
 #yellow {
-	background-color: #d6c100;
+    background-color: #d6c100;
 }
 
 #blue {
-	background-color: #2c42af;
+    background-color: #2c42af;
 }
 
 .line-name {
-	align-items: center;
-	display: flex;
-	font-size: 18px;
-	font-weight: bold;
-	margin-left: 5%;
+    align-items: center;
+    display: flex;
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 5%;
 }
 
 .options-and-distance-board {
-	display: flex;
-	flex-wrap: wrap;
-	height: 750px;
-	width: 50%;
-	justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    height: 750px;
+    width: 50%;
+    justify-content: center;
 }
 
 .alerts {
-	align-items: center;
-	background-color: gray;
-	border-radius: 10%;
-	display: flex;
-	flex-wrap: wrap;
-	height: 200px;
-	justify-content: center;
-	margin: 10px;
-	width: 260px;
+    align-items: center;
+    background-color: gray;
+    border-radius: 10%;
+    display: flex;
+    flex-wrap: wrap;
+    height: 200px;
+    justify-content: center;
+    margin: 10px;
+    width: 260px;
 }
 
 .alerts-heading {
-	align-items: center;
-	color: white;
-	display: flex;
-	height: 50px;
-	justify-content: center;
-	width: 260px;
+    align-items: center;
+    color: white;
+    display: flex;
+    height: 50px;
+    justify-content: center;
+    width: 260px;
 }
 
 .alerts-logo {
-	align-items: center;
-	background-color: orange;
-	display: flex;
-	font-size: 30px;
-	height: 40px;
-	justify-content: center;
-	width: 40px;
+    align-items: center;
+    background-color: orange;
+    display: flex;
+    font-size: 30px;
+    height: 40px;
+    justify-content: center;
+    width: 40px;
 }
 
 .alerts-text {
-	align-items: center;
-	display: flex;
-	font-size: 20px;
-	height: 40px;
-	margin-left: 5px;
-	text-transform: uppercase;
-	width: 175px;
+    align-items: center;
+    display: flex;
+    font-size: 20px;
+    height: 40px;
+    margin-left: 5px;
+    text-transform: uppercase;
+    width: 175px;
 }
 
 .form-section {
-	display: flex;
-	height: 120px;
+    display: flex;
+    height: 120px;
 }
 
 #start {
-	background-image : url("Metrocard.jpg");
-	background-repeat: no-repeat;
-	background-size: contain;
-  	border-radius: 10%;
-  	height: 200px;
-  	margin: 10px 10px 10px;
-	width: 260px;
+    background-image: url("Metrocard.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 10%;
+    height: 200px;
+    margin: 10px 10px 10px;
+    width: 260px;
 }
 
 .commuter-start-section {
-	height: 100px;
-	width: 100px;
+    height: 100px;
+    width: 100px;
 }
 
 .commuter-start-section {
-	background-image: url("commuter-start.png");
-	background-repeat: no-repeat;
-	background-size: contain;
-	height: 50px;
-	width: 100px;
+    background-image: url("commuter-start.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 50px;
+    width: 100px;
 }
 
 .scoreboard2 {
-	display: flex;
-	flex-wrap: wrap;
-	height: 250px;
-	width: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    height: 250px;
+    width: 400px;
 }
 
 .position {
-	height: 50px;
-	width: 50px;
+    height: 50px;
+    width: 50px;
 }
 
 .active {
-	background-size: contain;
-  	background-repeat: no-repeat;
-	background-image: url("commuter.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url("commuter.png");
 }
 
 .home-icon {
-	height: 50px;
-	width: 50px;
+    height: 50px;
+    width: 50px;
 }
-
-
