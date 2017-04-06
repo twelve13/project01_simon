@@ -3,6 +3,7 @@
 }
 
 main {
+	border: solid 2px black;
 	display: flex;
 	margin: 3%;
 }
@@ -23,7 +24,7 @@ header {
 .logo {
 	background-color: black;
 	color: white;
-	height: 200px;
+	height: 175px;
 	text-align: center;
 	width: 150px;
 }
@@ -33,13 +34,13 @@ header {
 }
 
 .m {
-	font-size: 125px;
+	font-size: 100px;
 }
 
 .game-name {
 	font-size: 100px;
-	height: 180px;
-	margin: 20px 0 0 5px;
+	height: 155px;
+	margin: 8px 0 0 5px;
 	width: 300px;
 }
 
@@ -54,10 +55,11 @@ header {
 }
 .scoreboard :nth-child(1), .scoreboard :nth-child(2){
 	color: red;
+	margin-top: 15px;
 }
 
 .scoreboard :nth-child(3), .scoreboard :nth-child(4) {
-	color: yellow;
+	color: white;
 	width: 200px;
 }
 

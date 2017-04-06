@@ -15,7 +15,7 @@ var greenLight = function() {
 	var greenOff = function(){
 		greenButton.css("background-color", "green");
 	}
-	setTimeout(greenOff, 500);
+	setTimeout(greenOff, 350);
 	document.getElementById("e-note").play();
 };
 
@@ -25,7 +25,7 @@ var redLight = function(){
 	var redOff = function(){
 		redButton.css("background-color", "#a8000b");
 	}
-	setTimeout(redOff, 500);
+	setTimeout(redOff, 350);
 	document.getElementById("a-note").play();
 };
 
@@ -35,7 +35,7 @@ var yellowLight = function(){
 	var yellowOff = function(){
 		yellowButton.css("background-color", "#d6c100");
 	}
-	setTimeout(yellowOff, 500);
+	setTimeout(yellowOff, 350);
 	document.getElementById("c-sharp-note").play();
 };
 
@@ -45,13 +45,13 @@ var blueLight = function(){
 	var blueOff = function(){
 		blueButton.css("background-color", "#2c42af");
 	}
-	setTimeout(blueOff, 500);
+	setTimeout(blueOff, 350);
 	document.getElementById("a-low-note").play();
 };
 
 
 var flashTargetColor = function(){
-	offset = 900;
+	// offset = 900;
 	for (let i = 0; i < targetSequence.length; i++){
 		if (targetSequence[i] == 1){
 		// console.log("one was chosen");
@@ -74,6 +74,13 @@ form.submit(function(event){
 	level = $("#select").val();
 	console.log(level);
 	$("#score").text(level);
+	if (level == 8) {
+		offset = 900;
+	} else if (level == 14) {
+		offset = 700;
+	} else if (level == 20) {
+		offset = 550;
+	}
 
 });
 
@@ -83,7 +90,7 @@ form.submit(function(event){
 // let randomKey = [1, 2, 3, 4];
 // let [green, red, yellow, blue] = randomKey;
 
-let compare = function(e){
+var compare = function(e){
 	e.preventDefault();
 	let choice = $(this).attr("id");
 	if (choice == "green"  || e.which == 54){
