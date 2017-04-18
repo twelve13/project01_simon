@@ -5,6 +5,9 @@
 	<title>Simon</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.css">
+	<!-- I'm not sure if this is a desired effect, but typically you would use a normalize
+	or reset css stylesheet, but typically not both. In this case, I think you just
+	need to use the normalize to preserve the styling effect currently being applied.  -->
 	<link rel="stylesheet" href="style.css">
 </head>
 
@@ -58,9 +61,13 @@
 					</form>
 				</div>
 			</div>
+			<!-- If this 'start' div starts the game, what does the submit button above do? Maybe use one or the other.  -->
 			<div id="start"></div>
 			<div class="commuter-start-section"></div>
 			<div class="scoreboard2">
+				<!-- I would suggest using CSS styling to move the 'person' to new positions
+				on the screen instead of changing what 'position' div it is in. Look into
+				using 'position: absolute' or 'position: relative' to do that.  -->
 				<div class="position"></div>
 				<div class="position"></div>
 				<div class="position"></div>
@@ -84,15 +91,18 @@
 				<div class="position"><img class="home-icon" src="home.png" alt="your home"></div>
 			</div>
 		</div>
+		<!-- Good citation ++ -->
 		<!-- audio files obtained from https://www.freesound.org/people/guitarmaster/  and  https://www.freesound.org/people/syseQ/ -->
 		<audio id="e-note" src="e-note.wav"></audio>
 		<audio id="a-note" src="a-note.wav"></audio>
 		<audio id="c-sharp-note" src="c-sharp-note.wav"></audio>
 		<audio id="a-low-note" src="a-low-note.wav"></audio>
 		<audio id="win" src="win.wav"></audio>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-		<script src="script.js"></script>
 	</main>
+	<!-- Doesn't make a significant difference, but scripts are commonly loaded as the
+	last element in 'body', not 'main' -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="script.js"></script>
 </body>
 
 </html>

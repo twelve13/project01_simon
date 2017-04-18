@@ -1,24 +1,28 @@
 # project01_simon
+*by Caroline Chen*
 
-Technologies Used:
+### Technologies Used:
 
 HTML, CSS, Javascript (with jQuery library)
 
 
-Approach Taken:
+### Approach Taken:
 
 The goal was to create a spin-off of the classic game, Simon, with a DC Metro theme.  The basic rules and setup were observed in the inital set up of the game, then liberties were taken to fit the new game theme.  Once the original Javascript game logic proved to be faulty, sessions with the instructors led to a working script.  Next, a dynamic score-keeping board was created to add to the basic look and feel of the game.
 
 
-Installation Instructions:
+### Installation Instructions:
 
 None.
+<!-- Here just list the basic steps of cloning down the repo and opening index.html -->
 
-Unsolved Problems:
+### Unsolved Problems:
 
-The code needs cleanup and restructuring to keep it condensed and DRY.  More playtesting needs to be conducted and unusual scenarios need to be investigated.  Currently, if the user clicks too fast, it can interfere with the sounds.
+- The code needs cleanup and restructuring to keep it condensed and DRY.  
+- More playtesting needs to be conducted and unusual scenarios need to be investigated.  
+- Currently, if the user clicks too fast, it can interfere with the sounds.
 
-User Stories:
+### User Stories:
 
 1.  As a user, I should be able to control when to start the game, so that I am prepared to play the game.
 2.  As a user, I should be able to choose the level of difficulty, so that I can opt to be challenged.

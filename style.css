@@ -1,12 +1,15 @@
 * {
     font-family: arial;
 }
+/*You can also just set this font on the body element and all elements will inherit it
+from this shared parent element*/
 
 main {
     border: solid 2px black;
     display: flex;
     margin: 2%;
 }
+/*Nice use of flexbox ++*/
 
 .header-and-lightbox {
     display: flex;
@@ -185,3 +188,5 @@ header {
     height: 50px;
     width: 50px;
 }
+
+/*Overall, great layout and styling ++ */
