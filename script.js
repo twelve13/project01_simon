@@ -12,7 +12,10 @@ var level = 13;
 var levelForWin = 13;
 var offset = 900;
 
+// Good semantic naming for variables ++
 
+// While function expressions are completely valid, I would get used to using function
+// declarations more (they are more often the norm)
 var greenLight = function() {
     greenButton.css("background-color", "limegreen");
     var greenOff = function() {
@@ -20,6 +23,7 @@ var greenLight = function() {
     }
     setTimeout(greenOff, 350);
     document.getElementById("e-note").play();
+    // Nice use of setTimeout and HTML's audio element ++
 };
 
 
@@ -57,6 +61,8 @@ var flashTargetColor = function() {
     for (let i = 0; i < targetSequence.length; i++) {
         if (targetSequence[i] == 1) {
             // console.log("one was chosen");
+            // Generally, you want to remove commented out / unused code before pushing
+            // to production
             setTimeout(greenLight, (i + 1) * offset);
         } else if (targetSequence[i] == 2) {
             // console.log("two was chosen");
@@ -76,6 +82,7 @@ form.submit(function(event) {
     level = $("#select").val();
     console.log(level);
     $("#score").text(level);
+    // What / where is #score ?
     if (level == 13) {
         levelForWin = 13;
         offset = 900;
@@ -129,6 +136,9 @@ var compare = function(e) {
         targetSequence = [];
     }
 }
+// Really great code quality above; maybe consider breaking some of these into smaller
+// functions such as `checkForFinished`, etc.
+
 
 greenButton.on("click", compare);
 redButton.on("click", compare);
@@ -136,6 +146,7 @@ yellowButton.on("click", compare);
 blueButton.on("click", compare);
 
 document.addEventListener("keydown", compare);
+// You can also use $(document).on("keydown", compare)
 
 
 var getNextColor = function() {
@@ -146,7 +157,10 @@ var getNextColor = function() {
 
 
 startButton.on("click", getNextColor);
+// Maybe combine this functionality in with the event listener on 'form' (or vice-versa)
 
+
+// Remove no-longer-needed pseudo-code or move it a separate file
 
 // make generic function that applies to all the buttons
 // this will tell you which color was clicked based on element id
