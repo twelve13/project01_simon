@@ -19,6 +19,7 @@ var greenLight = function() {
         greenButton.css("background-color", "green");
     }
     setTimeout(greenOff, 350);
+    document.getElementById("e-note").currentTime = 0;
     document.getElementById("e-note").play();
 };
 
@@ -29,6 +30,7 @@ var redLight = function() {
         redButton.css("background-color", "#a8000b");
     }
     setTimeout(redOff, 350);
+    document.getElementById("a-note").currentTime = 0;
     document.getElementById("a-note").play();
 };
 
@@ -39,6 +41,7 @@ var yellowLight = function() {
         yellowButton.css("background-color", "#d6c100");
     }
     setTimeout(yellowOff, 350);
+    document.getElementById("c-sharp-note").currentTime = 0;
     document.getElementById("c-sharp-note").play();
 };
 
@@ -49,6 +52,7 @@ var blueLight = function() {
         blueButton.css("background-color", "#2c42af");
     }
     setTimeout(blueOff, 350);
+    document.getElementById("a-low-note").currentTime = 0;
     document.getElementById("a-low-note").play();
 };
 
