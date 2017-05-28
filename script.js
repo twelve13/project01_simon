@@ -19,6 +19,7 @@ var greenLight = function() {
         greenButton.css("background-color", "green");
     }
     setTimeout(greenOff, 350);
+    //currentTime=0 allows you to cut the playing time of the note
     document.getElementById("e-note").currentTime = 0;
     document.getElementById("e-note").play();
 };
@@ -130,6 +131,7 @@ var compare = function(e) {
         }
     } else {
         console.log("wrongo");
+        document.getElementById("game-over").play();
         targetSequence = [];
     }
 }
@@ -152,24 +154,6 @@ var getNextColor = function() {
 startButton.on("click", getNextColor);
 
 
-// make generic function that applies to all the buttons
-// this will tell you which color was clicked based on element id
-// set what equals what using arrays
-// every time you click
-// compare against target sequence at the current move index
-//increment current , then just wait for them to click on the next button
-//after check if colors match, make sure you're not at the last position, can't advance past what's there
-//also check is this the last color in the seqeunce, then trigger get Next color
 
 
-//have multiple levels of difficulty
-//number of moves
-//speed
 
-//have time restrictions for choices?
-
-//add sounds
-
-//maybe change layout
-
-//be able to choose using keyboard?
