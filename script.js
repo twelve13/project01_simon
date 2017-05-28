@@ -6,12 +6,17 @@ var blueButton = $("#blue");
 var form = $("form");
 var startButton = $("#start");
 
+var success = $(".success");
+var fail = $(".fail");
+
 var targetSequence = [];
 var currentMove = 0;
 var level = 13;
 var levelForWin = 13;
 var offset = 900;
 
+success.hide();
+fail.hide();
 
 var greenLight = function() {
     greenButton.css("background-color", "limegreen");
@@ -76,6 +81,9 @@ var flashTargetColor = function() {
     }
 };
 
+//levelForWin will get subtracted from 21 to determine how many more moves are needed to win.
+//with each increasing difficulty level, make the target lights flash faster in succession by shortening the offset.
+
 form.submit(function(event) {
     event.preventDefault();
     level = $("#select").val();
@@ -91,7 +99,6 @@ form.submit(function(event) {
         levelForWin = 1;
         offset = 550;
     }
-
 });
 
 
@@ -112,19 +119,22 @@ var compare = function(e) {
         blueLight();
     }
     console.log("user guess is " + choiceVal);
-    console.log("number at first position of target is " + targetSequence[currentMove]);
+    console.log("number at first position of target is " + targetSequence[currentMove]);e
+//if the user's choice matches the target sequence at the current move, increase the current move count.
+//then if the current move count matches the length of the target sequence (the sequence given so far), see if you've hit the number of moves needed to win the level
     if (choiceVal == targetSequence[currentMove]) {
         console.log("correcto");
         currentMove++;
 
         if (currentMove == targetSequence.length) {
+            $(".position:nth-child(" + level + ")").addClass("active");
+            $(".position:nth-child(" + (level - 1) + ")").removeClass("active");
+            
             if (currentMove == (21 - levelForWin)) {
                 document.getElementById("win").play();
+                success.show();
                 targetSequence = [];
             } else {
-
-                $(".position:nth-child(" + level + ")").addClass("active");
-                $(".position:nth-child(" + (level - 1) + ")").removeClass("active");
                 getNextColor();
                 level++;
             };
@@ -132,6 +142,7 @@ var compare = function(e) {
     } else {
         console.log("wrongo");
         document.getElementById("game-over").play();
+        fail.show();
         targetSequence = [];
     }
 }

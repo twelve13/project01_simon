@@ -164,14 +164,6 @@ header {
     width: 260px;
 }
 
-/*.commuter-start-section {
-    background-image: url("commuter-start.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    height: 50px;
-    width: 100px;
-}*/
-
 .scoreboard2 {
     display: flex;
     flex-wrap: wrap;
@@ -196,3 +188,4 @@ header {
     height: 50px;
     width: 50px;
 }
+
