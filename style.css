@@ -125,6 +125,11 @@ header {
     width: 40px;
 }
 
+.optional {
+    color: white;
+    margin: 3% 0;
+}
+
 .alerts-text {
     align-items: center;
     display: flex;
@@ -137,7 +142,16 @@ header {
 
 .form-section {
     display: flex;
+    flex-wrap: wrap;
     height: 120px;
+    justify-content: center;
+    text-align: center;
+}
+
+.directions {
+    box-sizing: border-box;
+    color: white;
+    padding: 5%;
 }
 
 #start {
