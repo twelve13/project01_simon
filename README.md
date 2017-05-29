@@ -7,7 +7,7 @@ HTML, CSS, Javascript (with jQuery library)
 
 Approach Taken:
 
-The goal was to create a spin-off of the classic game, Simon, with a DC Metro theme.  The basic rules and setup were observed in the inital set up of the game, then liberties were taken to fit the new game theme.  Once the original Javascript game logic proved to be faulty, sessions with the instructors led to a working script.  Next, a dynamic score-keeping board was created to add to the basic look and feel of the game.
+The goal was to create a spin-off of the classic memory game, Simon, with a DC Metro theme.  The basic rules and setup were observed in the inital set up of the game, then liberties were taken to fit the new game theme.  A dynamic score-keeping board was created to add to the basic look and feel of the game.
 
 
 Installation Instructions:
@@ -16,7 +16,7 @@ None.
 
 Unsolved Problems:
 
-The code needs cleanup and restructuring to keep it condensed and DRY.  More playtesting needs to be conducted and unusual scenarios need to be investigated.  Currently, if the user clicks too fast, it can interfere with the sounds.
+Game logic needs to be improved so game restarts smoothly without refreshing the page.  The code needs cleanup and restructuring to keep it condensed and DRY.  More playtesting needs to be conducted and unusual scenarios need to be investigated.  
 
 User Stories:
 
