@@ -1,5 +1,6 @@
 # project01_simon
 
+
 Technologies used:
 
 HTML, CSS, Javascript (with use of jQuery library)
@@ -27,3 +28,4 @@ User Stories:
 3.  As a user, I should be able to know if I made the correct game moves so that I know if I should keep playing.
 4.  As a user, I should be able to play the game using either a mouseclick or a key press.
 5.  As a user, I should be able to visualize how close I am to winning the level.
+
