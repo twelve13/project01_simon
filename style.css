@@ -16,6 +16,7 @@ main {
 }
 
 .options-and-distance-board {
+    background-color: #ebebeb;
     justify-content: center;
 }
 
@@ -171,7 +172,6 @@ header {
 }
 
 .position {
-    /*border-bottom: solid #c4c4c4 3px;*/
     background-image: url("tracks.png");
     background-size: contain;
     height: 50px;
@@ -186,7 +186,6 @@ header {
 }
 
 .home-icon {
-    background-color: white;
     height: 50px;
     width: 75px;
 }
