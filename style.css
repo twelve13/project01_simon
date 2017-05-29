@@ -8,11 +8,15 @@ main {
     margin: 2%;
 }
 
-.header-and-lightbox {
+.header-and-lightbox, .options-and-distance-board {
     display: flex;
     flex-wrap: wrap;
     height: 750px;
     width: 50%;
+}
+
+.options-and-distance-board {
+    justify-content: center;
 }
 
 header {
@@ -47,13 +51,14 @@ header {
 .light-box {
     height: 590px;
     margin: 6px 0 0 10px;
+    width: 100%;
 }
 
 .green-line, .red-line, .yellow-line, .blue-line {
     display: flex;
     height: 140px;
     margin: 1%;
-    width: 560px;
+    width: 100%;
 }
 
 .light {
@@ -86,13 +91,7 @@ header {
     margin-left: 5%;
 }
 
-.options-and-distance-board {
-    display: flex;
-    flex-wrap: wrap;
-    height: 750px;
-    width: 50%;
-    justify-content: center;
-}
+
 
 .alerts {
     align-items: center;
@@ -172,20 +171,23 @@ header {
 }
 
 .position {
-    border-bottom: solid #c4c4c4 3px;
+    /*border-bottom: solid #c4c4c4 3px;*/
+    background-image: url("tracks.png");
+    background-size: contain;
     height: 50px;
     width: 75px;
 }
 
 .active {
-    background-image: url(" metrocar.png");
+    background-image: url("metrocar.png");
     background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .home-icon {
+    background-color: white;
     height: 50px;
-    width: 50px;
+    width: 75px;
 }
 
