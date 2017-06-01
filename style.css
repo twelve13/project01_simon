@@ -172,15 +172,15 @@ header {
 }
 
 .position {
-    background-image: url("tracks.png");
     background-size: contain;
+    border-bottom: solid gray 5px;
     height: 50px;
     width: 75px;
 }
 
 .active {
     background-image: url("metrocar.png");
-    background-position: bottom;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
