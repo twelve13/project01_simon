@@ -66,16 +66,12 @@ var blueLight = function() {
 var flashTargetColor = function() {
     for (let i = 0; i < targetSequence.length; i++) {
         if (targetSequence[i] == 1) {
-            // console.log("one was chosen");
             setTimeout(greenLight, (i + 1) * offset);
         } else if (targetSequence[i] == 2) {
-            // console.log("two was chosen");
             setTimeout(redLight, (i + 1) * offset);
         } else if (targetSequence[i] == 3) {
-            // console.log("three was chosen");
             setTimeout(yellowLight, (i + 1) * offset);
         } else if (targetSequence[i] == 4) {
-            // console.log("four was chosen");
             setTimeout(blueLight, (i + 1) * offset);
         }
     }
@@ -134,6 +130,9 @@ var compare = function(e) {
                 document.getElementById("win").play();
                 success.show();
                 targetSequence = [];
+                currentMove = 0;
+                level = 13;
+                $(".position").removeClass("active");
             } else {
                 getNextColor();
                 level++;
@@ -144,6 +143,9 @@ var compare = function(e) {
         document.getElementById("game-over").play();
         fail.show();
         targetSequence = [];
+        currentMove = 0;
+        level = 13;
+        $(".position").removeClass("active");
     }
 }
 
@@ -156,6 +158,8 @@ document.addEventListener("keydown", compare);
 
 
 var getNextColor = function() {
+    success.hide();
+    fail.hide();
     currentMove = 0;
     targetSequence.push(Math.floor((Math.random() * 4 + 1)));
     flashTargetColor();
