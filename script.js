@@ -132,7 +132,9 @@ var compare = function(e) {
                 targetSequence = [];
                 currentMove = 0;
                 level = 13;
-                $(".position").removeClass("active");
+                setTimeout(function() {
+                    $(".position").removeClass("active");
+                }, 2000);
             } else {
                 getNextColor();
                 level++;
@@ -145,7 +147,9 @@ var compare = function(e) {
         targetSequence = [];
         currentMove = 0;
         level = 13;
-        $(".position").removeClass("active");
+        setTimeout(function() {
+            $(".position").removeClass("active");
+        }, 2000);
     }
 }
 
